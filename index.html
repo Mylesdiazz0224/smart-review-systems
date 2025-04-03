@@ -4,188 +4,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Review Systems</title>
-  <link rel="icon" href="https://i.imgur.com/8Km9tLL.png" type="image/png" />
+  <title>Smart Review Systems | Venice, Florida</title>
+  <link rel="icon" href="https://i.imgur.com/HB8uIL9.png" type="image/png" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f0f4f8;
+      background: #f4f4f4;
       color: #333;
     }
     header {
-      background: #006064;
+      background: #006494;
       color: white;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
-    }
-    header img {
-      height: 40px;
-      margin-right: 1rem;
     }
     nav {
-      background: #004d40;
-      padding: 1rem;
-      width: 250px;
-      position: fixed;
-      top: 0;
+      display: none;
+      flex-direction: column;
+      background: #004b6e;
+      position: absolute;
+      top: 60px;
       left: 0;
-      height: 100%;
-      color: white;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
-    nav h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      width: 200px;
+      padding: 1rem;
     }
     nav a {
-      display: block;
       color: white;
       text-decoration: none;
-      padding: 0.5rem 0;
-      transition: 0.3s;
+      margin: 10px 0;
     }
-    nav a:hover {
-      background: #00796b;
-      padding-left: 1rem;
+    .menu-toggle {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .active {
+      display: flex;
     }
     main {
-      margin-left: 270px;
       padding: 2rem;
-      scroll-behavior: smooth;
     }
-    h2 {
-      color: #004d40;
+    section {
+      margin-bottom: 2rem;
     }
     .pricing {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
     }
-    .plan {
+    .card {
       background: white;
       padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 420px;
-      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .plan:hover {
-      transform: translateY(-5px);
-    }
-    .plan ul {
-      padding-left: 1rem;
-    }
-    .plan li::before {
-      content: "✓ ";
-      color: green;
-    }
-    .contact, .about {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-top: 3rem;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-    .contact a {
-      color: #00695c;
-      font-weight: bold;
-    }
-    .button {
-      display: inline-block;
-      background: #00796b;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1.5rem;
-      font-size: 1rem;
-    }
-    .button:hover {
-      background: #004d40;
+    .card h3 {
+      margin-top: 0;
     }
     footer {
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
-      background: #eeeeee;
-      margin-top: 2rem;
+      background: #006494;
+      color: white;
     }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;">
-      <img src="https://i.imgur.com/8Km9tLL.png" alt="Logo" />
-      <h1>Smart Review Systems</h1>
-    </div>
+    <h1>Smart Review Systems</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
   </header>
-  <nav>
-    <h2>Menu</h2>
-    <a href="#what-we-do">What We Do</a>
+  <nav id="sidebar">
+    <a href="#about">About</a>
     <a href="#pricing">Pricing</a>
-    <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <main>
-    <section id="what-we-do">
-      <h2>What We Do</h2>
-      <p>We help Southwest Florida businesses manage their Google reviews using AI. We reply to your reviews either manually or automatically—based on your plan—so you can maintain a professional presence without spending your valuable time.</p>
+    <section id="about">
+      <h2>Who We Are</h2>
+      <p>We’re a locally owned and operated business based right here in beautiful Venice, Florida. Our mission is to help small businesses in Southwest Florida grow by managing their online reputation and handling reviews professionally, quickly, and effectively. We’re proud to support the local community and help it thrive in the digital age.</p>
     </section>
 
     <section id="pricing">
-      <h2>Our Pricing Plans</h2>
+      <h2>Our Pricing</h2>
       <div class="pricing">
-        <div class="plan">
-          <h3>Self-Managed Plan - $149/mo</h3>
+        <div class="card">
+          <h3>Basic Review Plan - $149/month</h3>
           <ul>
-            <li>Weekly AI-generated personalized replies</li>
-            <li>You post the replies at your convenience</li>
-            <li>Save time, retain full control</li>
-            <li>Email support</li>
+            <li>&#10003; We draft review replies for you</li>
+            <li>&#10003; You approve before posting</li>
+            <li>&#10003; Weekly analytics summary</li>
           </ul>
         </div>
-        <div class="plan">
-          <h3>Fully Automated Plan - $199/mo</h3>
+        <div class="card">
+          <h3>Fully Automated Plan - $199/month</h3>
           <ul>
-            <li>We monitor and respond to Google reviews for you</li>
-            <li>AI-generated, brand-safe replies auto-posted</li>
-            <li>Complete automation</li>
-            <li>Email & phone support</li>
+            <li>&#10003; We reply to reviews on your behalf</li>
+            <li>&#10003; Includes personalized AI-driven responses</li>
+            <li>&#10003; Hands-free and stress-free</li>
           </ul>
         </div>
       </div>
-      <div style="text-align: center;">
-        <a href="https://forms.gle/YOUR_REAL_FORM_LINK" class="button" target="_blank">Start Your Free Trial</a>
-      </div>
     </section>
 
-    <section id="about" class="about">
-      <h2>About Us</h2>
-      <p>We’re a local team based in beautiful Southwest Florida. As Floridians, we understand the challenges local businesses face. Our goal is to give you a simple, stress-free tool to help you stay ahead with your online reputation—so you can focus on what you do best.</p>
-    </section>
-
-    <section id="contact" class="contact">
+    <section id="contact">
       <h2>Contact Us</h2>
       <p>Email: <a href="mailto:hello@smartreviewsystems.com">hello@smartreviewsystems.com</a></p>
-      <p>We're based in Florida and always happy to help. Expect a reply within 24 hours.</p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Smart Review Systems | Locally Operated in Southwest Florida
+    <p>&copy; 2025 Smart Review Systems | Proudly serving Venice, Florida</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
