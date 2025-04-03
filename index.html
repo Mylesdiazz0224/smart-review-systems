@@ -132,7 +132,7 @@ nav#sidebar a {
 </head>
 <body>
   <header>
-  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     Smart Review Systems – Based in Venice, FL
   </header>
   <nav id="sidebar">
@@ -212,7 +212,28 @@ nav#sidebar a {
   <footer>
     &copy; 2025 Smart Review Systems | Venice, Florida
   </footer>
+
 <script>
+  function toggleMenu() {
+    const nav = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const isActive = nav.classList.contains('active');
+    if (isActive) {
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    } else {
+      nav.classList.add('active');
+      overlay.classList.add('active');
+    }
+  }
+  document.querySelectorAll('#sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('sidebar').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+    });
+  });
+</script>
+
   function toggleMenu() {
     const nav = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
