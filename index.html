@@ -33,9 +33,6 @@
     h2 {
       color: #014f86;
     }
-    ul {
-      padding-left: 1.2rem;
-    }
     .card {
       background: white;
       padding: 1.5rem;
@@ -66,28 +63,15 @@
       padding: 1rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
     button {
-      padding: 0.75rem;
+      padding: 0.75rem 1.5rem;
       background: #0077b6;
       color: white;
       border: none;
       border-radius: 5px;
+      font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
-    }
-    button:hover {
-      background: #014f86;
     }
     .sticky-cta {
       position: fixed;
@@ -129,7 +113,7 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Smart Review Systems was born right here in Venice, Florida, with one mission in mind — to help local businesses stay ahead in a digital world where online perception is everything. We’re a small team of professionals who understand that while you’re running your business, the last thing you need to worry about is replying to every single online review.</p><p>We’re a locally owned service based in Venice, Florida, helping small businesses improve their online reputation with consistent, thoughtful replies to customer reviews.</p>
+    <p>Smart Review Systems was born right here in Venice, Florida, with one mission in mind — to help local businesses stay ahead in a digital world where online perception is everything. We’re a small team of professionals who understand that while you’re running your business, the last thing you need to worry about is replying to every single online review.</p>
   </section>
 
   <section id="why">
@@ -160,11 +144,13 @@
     <div class="before-after">
       <div>
         <strong>Before:</strong>
-        <p>"Thanks."</p><p><strong>Problem:</strong> Cold, impersonal, and vague. Leaves the customer feeling unappreciated.</p>
+        <p>"Thanks for your feedback."</p>
+        <p><strong>Problem:</strong> Generic and impersonal. It doesn’t show appreciation or build a connection.</p>
       </div>
       <div>
         <strong>After (with us):</strong>
-        <p>"Thank you so much for your kind words! We’re thrilled you had a great experience with our team. Your feedback motivates us to keep providing top-quality service to every customer we serve!"</p><p><strong>Why it works:</strong> It’s warm, specific, and reflects pride in service. Customers feel acknowledged and are more likely to return or refer others.</p>
+        <p>"Thank you so much for your kind words! We’re thrilled you had a great experience with our team. Your feedback motivates us to keep providing top-quality service to every customer we serve!"</p>
+        <p><strong>Why it works:</strong> It’s warm, specific, and reflects pride in service. Customers feel acknowledged and are more likely to return or refer others.</p>
       </div>
     </div>
   </section>
@@ -177,13 +163,7 @@
 
   <section id="contact">
     <h2>Start Your Free Trial</h2>
-    <form action="https://formspree.io/f/xaygkkge" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="business" placeholder="Business Name" />
-      <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+    <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSd-bPd9ecaomPPEYYKSf5BMKpJ-TgRecuNTrPROlApUO1CLHg/viewform?usp=sharing" target="_blank"><button>Fill Out the Free Trial Form</button></a></p>
   </section>
 
   <footer>
