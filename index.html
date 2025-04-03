@@ -82,13 +82,67 @@
       color: #333;
       font-size: 0.9rem;
     }
-  </style>
+  
+.menu-toggle {
+  background: #004e7c;
+  color: white;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1001;
+}
+nav#sidebar {
+  display: flex;
+  flex-direction: column;
+  background: #003f4c;
+  color: white;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+nav#sidebar.active {
+  transform: translateX(0);
+}
+nav#sidebar a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+.overlay {
+  display: none;
+}
+.overlay.active {
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+</style>
 </head>
 <body>
   <header>
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
     Smart Review Systems – Based in Venice, FL
   </header>
-  <main>
+  <nav id="sidebar">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</nav>
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<main>
     <section class="hero">
       <h1>Online Reviews. Handled for You.</h1>
       <p>Build trust, boost visibility, and save time with personalized review replies — done-for-you by locals who care.</p>
@@ -158,5 +212,13 @@
   <footer>
     &copy; 2025 Smart Review Systems | Venice, Florida
   </footer>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
