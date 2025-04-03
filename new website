@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Review Systems</title>
+  <link rel="icon" href="https://i.imgur.com/8Km9tLL.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: #006064;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    header img {
+      height: 40px;
+      margin-right: 1rem;
+    }
+    nav {
+      background: #004d40;
+      padding: 1rem;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      color: white;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    nav h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #00796b;
+      padding-left: 1rem;
+    }
+    main {
+      margin-left: 270px;
+      padding: 2rem;
+      scroll-behavior: smooth;
+    }
+    h2 {
+      color: #004d40;
+    }
+    .pricing {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .plan {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 420px;
+      transition: transform 0.3s ease;
+    }
+    .plan:hover {
+      transform: translateY(-5px);
+    }
+    .plan ul {
+      padding-left: 1rem;
+    }
+    .plan li::before {
+      content: "✓ ";
+      color: green;
+    }
+    .contact, .about {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 3rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .contact a {
+      color: #00695c;
+      font-weight: bold;
+    }
+    .button {
+      display: inline-block;
+      background: #00796b;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1.5rem;
+      font-size: 1rem;
+    }
+    .button:hover {
+      background: #004d40;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      background: #eeeeee;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="https://i.imgur.com/8Km9tLL.png" alt="Logo" />
+      <h1>Smart Review Systems</h1>
+    </div>
+  </header>
+  <nav>
+    <h2>Menu</h2>
+    <a href="#what-we-do">What We Do</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
+    <section id="what-we-do">
+      <h2>What We Do</h2>
+      <p>We help Southwest Florida businesses manage their Google reviews using AI. We reply to your reviews either manually or automatically—based on your plan—so you can maintain a professional presence without spending your valuable time.</p>
+    </section>
+
+    <section id="pricing">
+      <h2>Our Pricing Plans</h2>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Self-Managed Plan - $149/mo</h3>
+          <ul>
+            <li>Weekly AI-generated personalized replies</li>
+            <li>You post the replies at your convenience</li>
+            <li>Save time, retain full control</li>
+            <li>Email support</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Fully Automated Plan - $199/mo</h3>
+          <ul>
+            <li>We monitor and respond to Google reviews for you</li>
+            <li>AI-generated, brand-safe replies auto-posted</li>
+            <li>Complete automation</li>
+            <li>Email & phone support</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <a href="https://forms.gle/YOUR_REAL_FORM_LINK" class="button" target="_blank">Start Your Free Trial</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>We’re a local team based in beautiful Southwest Florida. As Floridians, we understand the challenges local businesses face. Our goal is to give you a simple, stress-free tool to help you stay ahead with your online reputation—so you can focus on what you do best.</p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:hello@smartreviewsystems.com">hello@smartreviewsystems.com</a></p>
+      <p>We're based in Florida and always happy to help. Expect a reply within 24 hours.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Smart Review Systems | Locally Operated in Southwest Florida
+  </footer>
+</body>
+</html>
