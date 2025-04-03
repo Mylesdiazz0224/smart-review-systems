@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart Review Systems | Venice, FL</title>
   <style>
+    #overlay.active {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 9;
+    }
+    #overlay {
+      display: none;
+    }
+    #overlay.active {
+      display: block;
+    }
+    
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
@@ -265,6 +279,28 @@ nav#sidebar a {
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
       }
+    });
+  });
+</script>
+
+<div id="overlay" onclick="toggleMenu()"></div>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+  }
+
+  document.querySelectorAll('#sidebar a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+      toggleMenu();
     });
   });
 </script>
