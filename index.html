@@ -5,98 +5,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart Review Systems | Venice, FL</title>
-  <link rel="icon" href="https://i.imgur.com/8Km9tLL.png" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      background: #f8f9fa;
       color: #333;
     }
     header {
-      background: #006494;
+      background: #005f73;
       color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-    }
-    header img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    .menu-toggle {
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    nav {
-      display: none;
-      flex-direction: column;
-      background: #004b6e;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 200px;
-      padding: 2rem 1rem;
-      z-index: 1000;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-    }
-    nav.active {
-      display: flex;
-      transform: translateX(0);
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 10px 0;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 999;
-    }
-    .overlay.active {
-      display: block;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
     }
     main {
-      padding: 2rem;
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
+      padding: 2rem;
     }
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
     .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: linear-gradient(to right, #006494, #0099c9);
+      background: linear-gradient(to right, #0a9396, #94d2bd);
       color: white;
+      padding: 3rem 2rem;
       border-radius: 10px;
+      text-align: center;
     }
-    .hero h2 {
-      font-size: 2.2rem;
+    .hero h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    .section-box {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .hero p {
+      font-size: 1.2rem;
     }
-    .pricing {
+    h2 {
+      color: #005f73;
+    }
+    .features, .pricing {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
@@ -105,101 +54,109 @@
       background: white;
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
     .card h3 {
       margin-top: 0;
+      color: #0a9396;
     }
     .cta {
       text-align: center;
-      margin: 3rem 0;
+      margin-top: 2rem;
     }
     .cta a {
-      display: inline-block;
-      background: #0077b6;
+      background: #005f73;
       color: white;
       padding: 0.75rem 1.5rem;
+      border-radius: 5px;
       text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
+      font-weight: bold;
     }
     .cta a:hover {
-      background: #004e7c;
+      background: #003f4c;
     }
     footer {
+      background: #e0e0e0;
       text-align: center;
       padding: 1rem;
-      background: #006494;
-      color: white;
+      color: #333;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
   <header>
-    <h1><img src="https://i.imgur.com/8Km9tLL.png" alt="Logo" /> Smart Review Systems</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    Smart Review Systems – Based in Venice, FL
   </header>
-  <nav id="sidebar">
-    <a href="#about" onclick="toggleMenu()">About</a>
-    <a href="#benefits" onclick="toggleMenu()">Why It Works</a>
-    <a href="#pricing" onclick="toggleMenu()">Pricing</a>
-    <a href="#contact" onclick="toggleMenu()">Contact</a>
-  </nav>
-
   <main>
     <section class="hero">
-      <h2>Google Reviews, Done For You</h2>
-      <p>Venice, FL–based reputation management that saves you time and improves your brand's online image.</p>
+      <h1>Online Reviews. Handled for You.</h1>
+      <p>Build trust, boost visibility, and save time with personalized review replies — done-for-you by locals who care.</p>
     </section>
 
-    <section id="benefits" class="section-box">
-      <h2>Why This Matters</h2>
-      <p>Online reviews are the #1 driver of trust and visibility in 2024. But replying to them takes time you don't have. That's why Smart Review Systems blends powerful AI with human oversight to write and post professional replies that match your tone—and make you look like the hero to every customer.</p>
+    <section>
+      <h2>Why Online Reviews Matter</h2>
+      <p>Your reviews are your first impression. Over 90% of people check Google reviews before choosing a business. Responding professionally shows you care and helps you stand out — but who has the time? We do.</p>
     </section>
 
-    <section id="pricing" class="section-box">
-      <h2>Plans That Work For You</h2>
-      <div class="pricing">
-        <div class="card">
-          <h3>$149/mo – Self-Managed</h3>
-          <ul>
-            <li>✓ Weekly custom replies sent to your inbox</li>
-            <li>✓ You choose which to post</li>
-            <li>✓ Great for owners who want final say</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>$199/mo – Fully Automated</h3>
-          <ul>
-            <li>✓ We monitor and respond on your behalf</li>
-            <li>✓ Includes reporting + tone calibration</li>
-            <li>✓ You do nothing, we handle it all</li>
-          </ul>
-        </div>
+    <section>
+      <h2>How It Works</h2>
+      <ol>
+        <li>We monitor your Google reviews</li>
+        <li>We write personalized, AI-assisted replies</li>
+        <li>You approve them — or let us post them for you</li>
+        <li>You look polished, responsive, and professional</li>
+      </ol>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h3>What You Get</h3>
+        <ul>
+          <li>✓ Custom responses that match your tone</li>
+          <li>✓ Weekly reports on your online rep</li>
+          <li>✓ Review monitoring & alerts</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why It Works</h3>
+        <ul>
+          <li>✓ Builds trust with every response</li>
+          <li>✓ Saves you hours each month</li>
+          <li>✓ Improves visibility in Google search</li>
+        </ul>
       </div>
     </section>
 
-    <section class="cta">
-      <a href="https://forms.gle/YOUR_REAL_FORM_LINK" target="_blank">Start Your Free Trial</a>
+    <section class="pricing">
+      <div class="card">
+        <h3>$149/mo – Self Managed</h3>
+        <p>You receive review replies by email each week. You post them when ready.</p>
+      </div>
+      <div class="card">
+        <h3>$199/mo – Fully Automated</h3>
+        <p>We post replies directly to Google on your behalf. You do nothing.</p>
+      </div>
     </section>
 
-    <section id="contact" class="section-box">
+    <section>
+      <h2>What Business Owners Say</h2>
+      <p><em>"It’s like having a PR team without the overhead. My reviews finally sound human." – Local HVAC Owner</em></p>
+      <p><em>"This saved me so much time. Customers think I personally reply to every review." – Sarasota Gym Owner</em></p>
+    </section>
+
+    <div class="cta">
+      <a href="https://forms.gle/YOUR_REAL_FORM_LINK" target="_blank">Start Your Free Trial</a>
+    </div>
+
+    <section>
       <h2>Contact</h2>
       <p>Email: <a href="mailto:hello@smartreviewsystems.com">hello@smartreviewsystems.com</a></p>
-      <p>Locally based in Venice, FL — we respond within 24 hours.</p>
+      <p>We respond within 24 hours.</p>
     </section>
   </main>
-
   <footer>
     &copy; 2025 Smart Review Systems | Venice, Florida
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('sidebar').classList.toggle('active');
-      document.getElementById('overlay').classList.toggle('active');
-    }
-  </script>
 </body>
 </html>
