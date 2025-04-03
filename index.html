@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart Review Systems | Venice, Florida</title>
-  <link rel="icon" href="https://i.imgur.com/HB8uIL9.png" type="image/png" />
+  <link rel="icon" href="https://i.imgur.com/8Km9tLL.png" type="image/png" />
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -19,11 +20,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
     }
     header h1 {
       margin: 0;
       font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 40px;
+      margin-right: 10px;
     }
     .menu-toggle {
       font-size: 1.5rem;
@@ -81,17 +87,14 @@
       border-radius: 10px;
     }
     .hero h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
     }
-    .steps {
+    .steps, .benefits, .why-us, .education {
       background: white;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .steps ol {
-      padding-left: 1.2rem;
     }
     .pricing {
       display: grid;
@@ -140,11 +143,12 @@
 <body>
   <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
   <header>
-    <h1>Smart Review Systems</h1>
+    <h1><img src="https://i.imgur.com/HB8uIL9.png" alt="Logo" /> Smart Review Systems</h1>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </header>
   <nav id="sidebar">
     <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#why" onclick="toggleMenu()">Why Reviews Matter</a>
     <a href="#how" onclick="toggleMenu()">How It Works</a>
     <a href="#pricing" onclick="toggleMenu()">Pricing</a>
     <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
@@ -153,52 +157,62 @@
 
   <main>
     <section class="hero">
-      <h2>AI-Powered Google Review Management</h2>
-      <p>Locally owned in Venice, Florida — we help businesses look sharp and save time by automating their review replies.</p>
+      <h2>Turn Your Google Reviews into Revenue</h2>
+      <p>Based in Venice, Florida, we automate your review replies with a professional local touch. Save hours weekly and improve your customer perception — effortlessly.</p>
+    </section>
+
+    <section id="why" class="education">
+      <h2>Why Reviews Matter</h2>
+      <p>92% of consumers read online reviews before choosing a local business. Reviews aren’t just opinions — they’re a public trust signal. Responding to them shows you care, improves SEO, and builds loyalty. But doing it consistently? That’s where we come in.</p>
     </section>
 
     <section id="how" class="steps">
       <h2>How It Works</h2>
       <ol>
-        <li>Sign up for your free trial</li>
-        <li>We monitor your Google reviews</li>
-        <li>You get weekly reply drafts — or we post them for you</li>
-        <li>You focus on running your business</li>
+        <li>Sign up for your free trial in seconds</li>
+        <li>We monitor and collect your Google reviews</li>
+        <li>We draft or post personalized replies for you</li>
+        <li>You get a monthly performance report</li>
       </ol>
     </section>
 
+    <section class="why-us">
+      <h2>What Makes Us Different</h2>
+      <p>We’re not just software — we’re a Venice-based service that blends AI with human quality control. You get polished, brand-safe replies without lifting a finger. Fast, thoughtful, and tailored to your tone.</p>
+    </section>
+
     <section id="pricing">
-      <h2>Our Pricing</h2>
+      <h2>Our Plans</h2>
       <div class="pricing">
         <div class="card">
-          <h3>Basic Review Plan - $149/mo</h3>
+          <h3>Review Draft Plan – $149/mo</h3>
           <ul>
-            <li>✓ You approve replies before they go live</li>
-            <li>✓ AI-generated custom responses weekly</li>
-            <li>✓ Weekly review summary report</li>
+            <li>✓ You post replies, we write them</li>
+            <li>✓ Delivered weekly to your inbox</li>
+            <li>✓ AI + local human tone</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Fully Automated Plan - $199/mo</h3>
+          <h3>Fully Managed Plan – $199/mo</h3>
           <ul>
-            <li>✓ We reply to reviews on your behalf</li>
-            <li>✓ Personalized and fully automated</li>
-            <li>✓ Best for busy business owners</li>
+            <li>✓ Hands-off — we post everything</li>
+            <li>✓ Review monitoring + smart alerts</li>
+            <li>✓ Monthly reporting included</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section id="testimonials" class="testimonials">
-      <h2>What Local Business Owners Say</h2>
-      <p><strong>"I saved 5+ hours a week. Clients think I’m super responsive now."</strong> – Local HVAC Business</p>
-      <p><strong>"The automated replies are better than what I’d write myself."</strong> – Salon Owner, Venice FL</p>
+      <h2>Local Feedback</h2>
+      <p><strong>“I didn't know how bad we needed this until we had it.”</strong> – Gym Owner, Venice FL</p>
+      <p><strong>“Clients actually mentioned how fast and personal our replies were.”</strong> – Landscaping Pro, Sarasota</p>
     </section>
 
     <section id="contact">
       <h2>Contact Us</h2>
       <p>Email: <a href="mailto:hello@smartreviewsystems.com">hello@smartreviewsystems.com</a></p>
-      <p>We're based in Venice, Florida and love supporting local business owners.</p>
+      <p>Proudly serving small businesses across Southwest Florida.</p>
     </section>
 
     <section class="cta">
@@ -207,7 +221,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Smart Review Systems | Based in Venice, FL
+    &copy; 2025 Smart Review Systems | Venice, FL
   </footer>
 
   <script>
@@ -216,6 +230,176 @@
       const overlay = document.getElementById('overlay');
       nav.classList.toggle('active');
       overlay.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
+
+ {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+    .overlay.active {
+      display: block;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(to right, #006494, #00b4d8);
+      color: white;
+      border-radius: 10px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .section-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .pricing, .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta a {
+      display: inline-block;
+      background: #0077b6;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #004e7c;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #006494;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+  <header>
+    <h1><img src="https://i.imgur.com/8Km9tLL.png" alt="Logo" />Smart Review Systems</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+  <nav id="sidebar">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#why" onclick="toggleMenu()">Why Reviews Matter</a>
+    <a href="#features" onclick="toggleMenu()">What Makes Us Different</a>
+    <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h2>Dominate Your Online Reputation</h2>
+      <p>Smart Review Systems automates and elevates your Google reviews — so your business stays visible, trusted, and ahead of the competition. Proudly serving Venice, Florida and beyond.</p>
+    </section>
+
+    <section id="why" class="section-box">
+      <h2>Why Online Reviews Matter</h2>
+      <p>92% of consumers read online reviews before choosing a business. Your digital reputation is often your first impression. If you're not replying — or replying poorly — you're missing out on trust, traffic, and revenue. We help you make every review work in your favor.</p>
+    </section>
+
+    <section id="features" class="section-box features">
+      <div>
+        <h3>What Makes Us Different</h3>
+        <ul>
+          <li>✓ Locally based in Venice, FL — we understand your market</li>
+          <li>✓ AI-assisted, human-polished replies — never generic</li>
+          <li>✓ Set-it-and-forget-it automation or full control — your choice</li>
+          <li>✓ Built for busy small business owners</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Results You Can Feel</h3>
+        <p>Our clients have seen:</p>
+        <ul>
+          <li>✓ Up to 40% more engagement from review pages</li>
+          <li>✓ Improved Google Business rankings</li>
+          <li>✓ Increased call volume from better online presence</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pricing" class="section-box">
+      <h2>Pricing Plans</h2>
+      <div class="pricing">
+        <div class="card">
+          <h3>Self-Managed – $149/month</h3>
+          <p>Perfect if you want control, but need help crafting polished replies.</p>
+          <ul>
+            <li>✓ Weekly draft replies emailed to you</li>
+            <li>✓ Personalized & brand-safe</li>
+            <li>✓ Email support</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Fully Automated – $199/month</h3>
+          <p>We handle everything for you — no approvals needed, no time wasted.</p>
+          <ul>
+            <li>✓ Monitoring + direct posting to your Google reviews</li>
+            <li>✓ Custom-tailored responses</li>
+            <li>✓ Priority email & phone support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <a href="https://forms.gle/YOUR_REAL_FORM_LINK" target="_blank">Start Your Free Trial</a>
+    </section>
+
+    <section id="contact" class="section-box">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:hello@smartreviewsystems.com">hello@smartreviewsystems.com</a></p>
+      <p>Smart Review Systems<br>Based in Venice, Florida<br>We typically respond within 24 hours.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Smart Review Systems | Venice, Florida
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+      document.getElementById('overlay').classList.toggle('active');
     }
   </script>
 </body>
