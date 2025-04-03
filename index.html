@@ -4,290 +4,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Review Systems | Venice, FL</title>
+  <title>Smart Review Systems</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f8f9fa;
+      font-family: Segoe UI, sans-serif;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background: #005f73;
+      background-color: #000;
       color: white;
-      padding: 1.5rem 2rem;
+      padding: 1rem;
       text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
     }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
+    nav {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #003366;
+      color: white;
+      padding-top: 60px;
+      transition: right 0.3s;
+      z-index: 1001;
+    }
+    nav.active {
+      right: 0;
+    }
+    nav a {
+      display: block;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #005599;
+    }
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1002;
+      color: white;
+    }
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: none;
+      z-index: 1000;
+      background: rgba(0,0,0,0.5);
+    }
+    #overlay.active {
+      display: block;
     }
     section {
-      margin-bottom: 3rem;
-    }
-    .hero {
-      background: linear-gradient(to right, #0a9396, #94d2bd);
-      color: white;
-      padding: 3rem 2rem;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
     h2 {
-      color: #005f73;
+      color: #003366;
     }
-    .features, .pricing {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #0a9396;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .cta a {
-      background: #005f73;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .cta a:hover {
-      background: #003f4c;
-    }
-    footer {
-      background: #e0e0e0;
-      text-align: center;
-      padding: 1rem;
-      color: #333;
-      font-size: 0.9rem;
-    }
-  
-.menu-toggle {
-  background: #004e7c;
-  color: white;
-  padding: 0.5rem 1rem;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  z-index: 1001;
-}
-nav#sidebar {
-  display: flex;
-  flex-direction: column;
-  background: #003f4c;
-  color: white;
-  padding: 2rem 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 220px;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-}
-nav#sidebar.active {
-  transform: translateX(0);
-}
-nav#sidebar a {
-  color: white;
-  text-decoration: none;
-  margin: 10px 0;
-}
-.overlay {
-  display: none;
-}
-.overlay.active {
-  display: block;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-</style>
+  </style>
 </head>
 <body>
-  <header>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    Smart Review Systems – Based in Venice, FL
-  </header>
+  <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
   <nav id="sidebar">
-  <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
-  <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
-</nav>
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-<main>
-    <section class="hero">
-      <h1>Online Reviews. Handled for You.</h1>
-      <p>Build trust, boost visibility, and save time with personalized review replies — done-for-you by locals who care.</p>
-    </section>
+    <a href="#pricing">Pricing</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div id="overlay" onclick="toggleMenu()"></div>
+  <header>
+    <h1>Smart Review Systems – Based in Venice, FL</h1>
+  </header>
+  <section>
+    <h2>Online Reviews. Handled for You.</h2>
+    <p>Build trust, boost visibility, and save time with personalized review replies — done by locals who care.</p>
 
-    <section>
-      <h2>Why Online Reviews Matter</h2>
-      <p>Your reviews are your first impression. Over 90% of people check Google reviews before choosing a business. Responding professionally shows you care and helps you stand out — but who has the time? We do.</p>
-    </section>
+    <h2 id="pricing">Pricing</h2>
+    <p><strong>Self-Response Plan – $150/mo:</strong> We write the responses, you approve and post.</p>
+    <p><strong>Full Automation Plan – $200/mo:</strong> We write, manage, and post — fully hands-off.</p>
 
-    <section>
-      <h2>How It Works</h2>
-      <ol>
-        <li>We monitor your Google reviews</li>
-        <li>We write personalized, AI-assisted replies</li>
-        <li>You approve them — or let us post them for you</li>
-        <li>You look polished, responsive, and professional</li>
-      </ol>
-    </section>
+    <h2 id="testimonials">Testimonials</h2>
+    <p>"I no longer stress over Google reviews — Smart Review Systems handles everything!" – Local Business Owner</p>
 
-    <section class="features">
-      <div class="card">
-        <h3>What You Get</h3>
-        <ul>
-          <li>✓ Custom responses that match your tone</li>
-          <li>✓ Weekly reports on your online rep</li>
-          <li>✓ Review monitoring & alerts</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Why It Works</h3>
-        <ul>
-          <li>✓ Builds trust with every response</li>
-          <li>✓ Saves you hours each month</li>
-          <li>✓ Improves visibility in Google search</li>
-        </ul>
-      </div>
-    </section>
+    <h2 id="contact">Contact</h2>
+    <p>Email us at: <a href="mailto:hello@smartreviewsystems.com">hello@smartreviewsystems.com</a></p>
+  </section>
 
-    <section class="pricing">
-      <div class="card">
-        <h3>$149/mo – Self Managed</h3>
-        <p>You receive review replies by email each week. You post them when ready.</p>
-      </div>
-      <div class="card">
-        <h3>$199/mo – Fully Automated</h3>
-        <p>We post replies directly to Google on your behalf. You do nothing.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>What Business Owners Say</h2>
-      <p><em>"It’s like having a PR team without the overhead. My reviews finally sound human." – Local HVAC Owner</em></p>
-      <p><em>"This saved me so much time. Customers think I personally reply to every review." – Sarasota Gym Owner</em></p>
-    </section>
-
-    <div class="cta">
-      <a href="https://forms.gle/YOUR_REAL_FORM_LINK" target="_blank">Start Your Free Trial</a>
-    </div>
-
-    <section>
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hello@smartreviewsystems.com">hello@smartreviewsystems.com</a></p>
-      <p>We respond within 24 hours.</p>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 Smart Review Systems | Venice, Florida
-  </footer>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    const isActive = nav.classList.contains('active');
-    if (isActive) {
-      nav.classList.remove('active');
-      overlay.classList.remove('active');
-    } else {
-      nav.classList.add('active');
-      overlay.classList.add('active');
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      nav.classList.toggle('active');
+      overlay.classList.toggle('active');
     }
-  }
-  document.querySelectorAll('#sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('sidebar').classList.remove('active');
-      document.getElementById('overlay').classList.remove('active');
+
+    document.querySelectorAll('#sidebar a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+        toggleMenu();
+      });
     });
-  });
-</script>
-
-  function toggleMenu() {
-    const nav = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    nav.classList.toggle('active');
-    overlay.classList.toggle('active');
-  }
-</script>
-
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    nav.classList.toggle('active');
-    overlay.classList.toggle('active');
-  }
-
-  document.querySelectorAll('#sidebar a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('sidebar').classList.remove('active');
-      document.getElementById('overlay').classList.remove('active');
-    });
-  });
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-</script>
-
-<div id="overlay" onclick="toggleMenu()"></div>
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    nav.classList.toggle('active');
-    overlay.classList.toggle('active');
-  }
-
-  document.querySelectorAll('#sidebar a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-      toggleMenu();
-    });
-  });
-</script>
+  </script>
 </body>
 </html>
